@@ -13,10 +13,10 @@ ENV BIFROST_URL=https://github.com/stellar/go/releases/download/bifrost-$BIFROST
 RUN wget $BIFROST_URL
 RUN chmod +x bifrost-linux-amd64 && mv bifrost-linux-amd64 /go/bin/bifrost
 
-    # deploy db init script
-    ADD initbifrost /go/src/github.com/stellar/initbifrost
-    RUN go get github.com/lib/pq \
-        && go install github.com/stellar/initbifrost
+# deploy db init script
+ADD initbifrost /go/src/github.com/stellar/initbifrost
+RUN go get github.com/lib/pq \
+    && go install github.com/stellar/initbifrost
 
 
 # -----------------------
