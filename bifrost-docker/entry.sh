@@ -38,6 +38,7 @@ function init_bifrost_db() {
 }
 
 function start_bifrost() {
+  echo "Starting bifrost..."
   /go/bin/bifrost server -c /opt/bifrost/bifrost.cfg
 }
 
